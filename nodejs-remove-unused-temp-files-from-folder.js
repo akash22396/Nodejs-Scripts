@@ -1,8 +1,6 @@
 /*******************
 Remove unused file from directory using nodejs 
 ***************************/
-
-
 setTimeout(() => {
 
 // Get used filename from database
@@ -47,6 +45,4 @@ setTimeout(() => {
       });
     }
   })
-
-
 }, 10000)
