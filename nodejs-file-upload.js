@@ -21,10 +21,10 @@ app.post("/image",  function (req, res) {
     upload(req, res, function (err) {
         // res.send(req.file.filename)
         if (err) {
+            console.error(err)
             res.send('err')
         }else{
             res.send('image upload successfully!')
         }
-
     })
 })
