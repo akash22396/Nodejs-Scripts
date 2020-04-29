@@ -29,8 +29,6 @@ setTimeout(() => {
         files.forEach(function (file) {
           unusedFile.push(file)
         });
-        // console.log(usedFile);
-        //  console.log(unusedFile);
         for (let i = 0; i < unusedFile.length; i++) {
           if (usedFile.includes(unusedFile[i]) === true) {
             console.log(':)');
