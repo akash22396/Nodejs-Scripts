@@ -1,6 +1,9 @@
+let str = "-1nig#t9@";
 
- const reverseWord=(data)=> data.split('').reverse().join('')
+const reverseWord=(data)=> data.split('').reverse().join('')
+console.log(reverseWord(str));
 
+// Reverse string without unshifting special character
 const reverseWordWithoutSpecialChar = (data) => {
   let strData = data.toLowerCase().split("");
   let numMt = "0123456789".split("");
@@ -25,7 +28,4 @@ const reverseWordWithoutSpecialChar = (data) => {
   //    console.log(reverseAr);
   return reverseAr;
 };
-
-let str = "-1nig#t9@";
-console.log(reverseWord(str));
 console.log(reverseWordWithoutSpecialChar(str));
