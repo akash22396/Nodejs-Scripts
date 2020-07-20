@@ -1,3 +1,26 @@
+/***********************Working Code*****************************/
+var reverseOnlyLetters = function(str) {
+  let data = str.split('');
+let wordArr=[];
+let specialChar =[];
+data.forEach((dt,i)=>{
+  if(dt.match(/[a-zA-Z]/g)){
+    wordArr.push(dt)
+  }else{
+specialChar.push({id:i,val:dt})
+  }
+})
+let revString = wordArr.reverse().join('')
+specialChar.forEach(dt=>{
+  revString=revString.substr(0,dt.id)+dt.val+revString.substr(dt.id)
+})
+return revString
+};
+
+/****************************************************************/
+
+
+/***************************** Testing Code *********************************/
 let str = "-1nig#t9@";
 
 const reverseWord=(data)=> data.split('').reverse().join('')
