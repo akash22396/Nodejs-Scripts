@@ -1,0 +1,39 @@
+async function getData() {
+    const sqlQ = `select * from users`
+    await db.conn.then(() => {
+        const request = new sql.Request()
+        request.query(sqlQ, (err, result) => {
+            if (err) {
+                console.log(err)
+                return 0
+            } else {
+                let res = result.recordset
+                let data = [],
+                    dataInfo = {};
+                res.map(res => {
+                    let dt = dataInfo[res.name]
+                    console.log(dt)
+                    if (!dt) {
+                        dt = {
+                            name: res.name,
+                            email: []
+                        }
+                        dataInfo[res.name] = dt;
+                        data.push(dt);
+                    }
+                    if (res.email !== '') {
+                        dt.email.push(res.email)
+                    }
+                })
+                // console.log(data)
+                return data
+
+            }
+        })
+    }).catch(err => {
+        console.log(err)
+        return err
+    })
+};
+
+console.log(getData())
