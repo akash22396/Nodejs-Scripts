@@ -24,7 +24,7 @@ function convertAmount(amount) {
     console.log(convert(taka) + " ruppes and " + convert(paisa) + " paisa only")
     //$('#amount_in_word').html(convert(taka) + " ruppes and " + convert(paisa) + " paisa only");
 }
-convertAmount(11);
+
 
 function convert(numericValue) {
     inWords = []
@@ -117,3 +117,7 @@ function convert(numericValue) {
     }
     return finalWord;
 }
+
+
+
+convertAmount(11);
