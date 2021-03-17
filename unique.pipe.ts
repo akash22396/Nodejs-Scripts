@@ -14,4 +14,4 @@ export class UniquePipe implements PipeTransform {
   }
 }
 
-// *ngFor="let news of allNewsSource.sources | unique : 'language'"
+// *ngFor=" | unique : 'language'"
